@@ -1,0 +1,22 @@
+server:
+port: 8888
+servlet:
+  context-path: /springboot
+#logging:
+#  level:
+#    org.springframework: debug
+spring:
+  freemarker:
+    charset: UTF-8
+    ## 配置数据源信息
+  datasource:
+    username: scott
+    password: orcl
+    url: jdbc:oracle:thin:@localhost:1521:hotel
+    driver-class-name: oracle.jdbc.OracleDriver
+
+mybatis:
+  ## 配置mapper映射文件路径
+  mapper-locations: classpath:mapper/*.xml
+  ## 配置扫描实体包，给实体类设置别名
+  type-aliases-package: com.zfj.springBoot.pojo
